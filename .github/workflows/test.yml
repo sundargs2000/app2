@@ -6,9 +6,9 @@ jobs:
     steps:
       - id: prepublish
         uses: sundargs2000/stacks-pre-publish@master
-      - run: |
-          echo ${{ steps.prepublish.success }} 
-          echo ${{ steps.prepublish.success }} == 'true' && echo YUP
+      - run: echo ${{ steps.prepublish.success }} 
+      - run: if [ ${{ steps.prepublish.success }} == true; then echo "shiz equal"; fi
+          
       - name: Create Release
         if: ${{ steps.prepublish.success == 'true' }}
         uses: actions/create-release@v1
