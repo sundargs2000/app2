@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: prepublish
-        uses: sundargs2000/stacks-pre-publish@master
+        uses: sundargs2000/stacks-pre-publish@debug
       - run: echo ${{ steps.prepublish.outputs.success }} 
       - run: if [ ${{ steps.prepublish.outputs.success }} == true; then echo "shiz equal"; fi
           
