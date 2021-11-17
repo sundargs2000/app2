@@ -6,8 +6,6 @@ jobs:
     steps:
       - id: prepublish
         uses: sundargs2000/stacks-pre-publish@debug
-      - run: echo ${{ steps.prepublish.outputs.success }} 
-      - run: if [ ${{ steps.prepublish.outputs.success }} == true ]; then echo "shiz equal"; fi
           
       - name: Create Release
         if: ${{ steps.prepublish.outputs.success == 'true' }}
@@ -15,5 +13,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: v1.${{ github.ref }}
+          release_name: Release stack/${{ github.ref }}
