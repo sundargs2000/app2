@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: prepublish
-        uses: sundargs2000/stacks-pre-publish@v0
+        uses: github/stacks-pre-publish@v0
