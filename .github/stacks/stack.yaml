@@ -80,7 +80,7 @@ configs:
       automated-security-fixes: ${{ inputs.bool7 }}
 
 github-apps:
-- slug: ${{inputs.str15}}
+- slug: ${{inputs.bool1}}
   parameters:
      environment: ${{inputs.str16}}
      secrets:
