@@ -4,5 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - id: prepublish
-        uses: github/stacks-pre-publish@v0
+      - uses: bagbyte/use-private-action@v0.0.2
+        with:
+          private-action: github/stacks-pre-publish@v0
+          private-action-token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
