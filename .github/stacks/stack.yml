@@ -40,7 +40,7 @@ configs:
   repo-metadata:
     parameters:
       secrets:
-      - name: ${{inputs.str134}}
+      - name: ${{inputs.str1}}
         value: ${{inputs.str2}}
       topics:
       - ${{inputs.str3}}
@@ -51,7 +51,7 @@ configs:
       parameters:
         enforce-admins: ${{ inputs.bool1 }}
         required-pull-request-reviews:
-          dismiss-stale-reviews: ${{inputs.str2}}
+          dismiss-stale-reviews: ${{inputs.bool2}}
           require-code-owner-reviews: ${{ inputs.bool3 }}
           required-approving-review-count: ${{inputs.int1}}
         allow-force-pushes: ${{ inputs.bool4 }}
