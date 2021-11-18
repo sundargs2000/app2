@@ -6,9 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: 'github/stacks-pre-publish'
+          repository: 'github/stacks-pre-publish@private'
           token: '${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}'
-          path: 'stacks-pre-publish-master'
+          path: 'stacks-pre-publish'
       
-      - uses: ./stacks-pre-publish-master
+      - uses: ./stacks-pre-publish
 
