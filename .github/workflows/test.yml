@@ -4,7 +4,11 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: bagbyte/use-private-action@v0.0.2
+      - uses: actions/checkout@v2
         with:
-          private-action: github/stacks-pre-publish@v0
-          private-action-token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
+          repository: 'github/stacks-pre-publish'
+          token: '${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}'
+          path: 'stacks-pre-publish-master'
+      
+      - uses: ./stacks-pre-publish-master
+
