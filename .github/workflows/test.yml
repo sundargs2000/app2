@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: prepublish
-        uses: sundargs2000/stacks-pre-publish@vbeta1
+        uses: sundargs2000/stacks-pre-publish@master
           
       - name: Create Release
         if: ${{ steps.prepublish.outputs.success == 'true' }}
