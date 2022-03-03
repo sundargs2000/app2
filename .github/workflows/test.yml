@@ -10,3 +10,9 @@ on:
         - info
         - warning
         - debug 
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.event.inputs.log Level }}
