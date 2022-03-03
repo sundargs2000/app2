@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch:
     inputs:
-      log Level:
+      log Level log Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Levellog Level:
         description: 'Log level'     
         required: true
         default: 'warning' 
